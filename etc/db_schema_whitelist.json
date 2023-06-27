@@ -1,0 +1,13 @@
+{
+    "helloworld_profile_record": {
+        "column": {
+            "entity_id": true,
+            "email_id": true,
+            "name": true,
+            "age": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

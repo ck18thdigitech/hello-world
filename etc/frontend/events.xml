@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="hw_customobserver_log">
+        <observer name="hw_log_text" instance="Eighteentech\HelloWorld\Observer\CustomObserver" />
+    </event>
+</config>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <eighteentech>
+            <general>
+                <enable>1</enable>
+            </general>
+        </eighteentech>
+    </default>
+</config>

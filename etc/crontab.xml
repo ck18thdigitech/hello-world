@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author 18th DigiTech Team
+ * @copyright Copyright (c) 2020 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+     <group id="helloworld_demo_cron">
+          <job instance="Eighteentech\HelloWorld\Cron\HelloWorld" method="execute" name="helloworld_cron">               
+               <schedule>* * * * *</schedule>
+          </job>
+     </group>
+</config>

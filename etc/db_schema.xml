@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="helloworld_profile_record" resource="default" engine="innodb"   comment="HelloWorld Table">  
+        <column xsi:type="int" name="entity_id"  unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="email_id" length="255" nullable="false"  comment="Email ID"/>
+        <column xsi:type="varchar" name="name" length="20" nullable="false"   comment="Name"/>
+        <column xsi:type="int" name="age"  unsigned="false" nullable="false" comment="Age"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

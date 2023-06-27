@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+   <!--Use router 'standard' for frontend route-->
+   <router id="standard">
+       <!--Define a custom route with id and frontName-->
+       <route frontName="helloworld" id="helloworld">
+           <!--The module which this route match to-->
+           <module name="Eighteentech_HelloWorld"/>
+       </route>
+   </router>
+</config>

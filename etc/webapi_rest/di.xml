@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- A plugin that executes when the REST API is used OR when the Luma frontend places an order -->
+    <type name="Magento\Sales\Model\Order">
+        <plugin name="rest-training-sales-add-logging" type="Eighteentech\HelloWorld\Plugin\RestAddLoggingAfterOrderPlacePlugin"/>
+    </type>
+</config>

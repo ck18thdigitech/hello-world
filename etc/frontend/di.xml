@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author <mailto:info@18thdigitech.com>
+ * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
+ * @package Eighteentech_HelloWorld
+ * @link https://www.18thdigitech.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- A plugin that executes when a customer uses the LoginPost controller from the Luma frontend -->
+    <type name="Magento\Customer\Controller\Account\LoginPost">
+        <plugin name="training-customer-loginpost-plugin"
+                type="Eighteentech\HelloWorld\Plugin\CustomerLoginPostPlugin" sortOrder="20"/>
+    </type>
+</config>
