@@ -12,8 +12,10 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Eighteentech_Base::base">
-                    <resource id="Eighteentech_HelloWorld::index" title="Test Controller" sortOrder="10" />
-                    <resource id="Eighteentech_HelloWorld::configuration" title="Configuration" sortOrder="20" />
+                    <resource id="Eighteentech_HelloWorld::main" title="Hello World" sortOrder="10" >
+                        <resource id="Eighteentech_HelloWorld::index" title="Controller" sortOrder="10" />
+                        <resource id="Eighteentech_HelloWorld::configuration" title="Configuration" sortOrder="20" />
+                    </resource>
                 </resource>
             </resource>
         </resources>

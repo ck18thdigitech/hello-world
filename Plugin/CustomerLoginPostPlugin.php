@@ -1,20 +1,26 @@
 <?php declare(strict_types=1);
 /**
- * @author <mailto:info@18thdigitech.com>
+ * @author    <mailto:info@18thdigitech.com>
  * @copyright Copyright (c) 2023 18th DigiTech (https://www.18thdigitech.com)
- * @package Eighteentech_HelloWorld
- * @link https://www.18thdigitech.com/
+ * @package   Eighteentech_HelloWorld
+ * @link      https://www.18thdigitech.com/
  */
 namespace Eighteentech\HelloWorld\Plugin;
 
 use Psr\Log\LoggerInterface;
 use Magento\Framework\App\RequestInterface;
+use Eighteentech\HelloWorld\Helper\Data;
 
 /**
- * Introduces Context information for ActionInterface of Customer Action
+ * CustomerLoginPostPlugin file
+ *
  */
 class CustomerLoginPostPlugin
 {
+    /**
+     * @var helper
+     */
+    protected Data $helper;
 
     /**
      * @var LoggerInterface
@@ -27,11 +33,16 @@ class CustomerLoginPostPlugin
     private RequestInterface $request;
 
     /**
-     * @param LoggerInterface $logger
+     * @param Data             $helper
+     * @param LoggerInterface  $logger
      * @param RequestInterface $request
      */
-    public function __construct(LoggerInterface $logger, RequestInterface $request)
-    {
+    public function __construct(
+        Data $helper,
+        LoggerInterface $logger,
+        RequestInterface $request
+    ) {
+        $this->helper = $helper;
         $this->logger = $logger;
         $this->request = $request;
     }
@@ -41,8 +52,11 @@ class CustomerLoginPostPlugin
      */
     public function beforeExecute()
     {
-        $login = $this->request->getParam('login');
-        $username = $login['username'];
-        $this->logger->notice( "Login Post controller was used for " . $username );
+        $isEnable = $this->helper->getIsEnable();
+        if ($isEnable) {
+            $login = $this->request->getParam('login');
+            $username = $login['username'];
+            $this->logger->notice("Login Post controller was used for " . $username);
+        }
     }
 }

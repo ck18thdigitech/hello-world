@@ -7,6 +7,5 @@
  * @link https://www.18thdigitech.com/
  * @var $block \Eighteentech\HelloWorld\Block\Index
  */
- ?>
-
-<?= $block->sayHello() ?>
+?>
+<?= $block->escapeHtml($block->sayHello()) ?>
